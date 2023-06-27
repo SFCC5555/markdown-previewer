@@ -76,6 +76,7 @@ html {
 
 body {
   font-family: var(--mainFont);
+  height: 100svh;
 }
 
 .main {
@@ -157,12 +158,20 @@ textarea ,textarea:focus {
 }
 
 
-.main-container {
+.minor-container {
   height: 50%;
 }
 
+.main-container {
+  height: 85%;
+}
+
 @media screen and (min-width: 578px) {
-  .main-container {
+  .minor-container {
     height: 100%;
+  }
+
+  .main-container {
+    height: 75%;
   }
 }

@@ -17,11 +17,11 @@ function App() {
     <div className={`main position-relative d-flex flex-column align-items-center p-5 ${mode}Background1 ${mode}Text`}>
       <Title />
       <ModeButton />
-      <section className='row text-center w-100 gap-3 gap-sm-0 h-75' >
-        <div className={`col-12 col-sm-6 main-container`}>
+      <section className='row text-center w-100 gap-3 gap-sm-0 main-container' >
+        <div className={`col-12 col-sm-6 minor-container`}>
          <Editor />
         </div>
-        <div className={`col-12 col-sm-6 main-container`}>
+        <div className={`col-12 col-sm-6 minor-container`}>
           <Previewer />
         </div>
       </section> 
