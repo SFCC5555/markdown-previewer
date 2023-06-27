@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Title } from './components/Title';
 import { ModeButton } from './components/ModeButton';
+import { FontsButton } from './components/FontsButton';
 import { Editor } from './components/Editor';
 import { Previewer } from './components/Previewer';
 import { Footer } from './components/Footer';
@@ -16,7 +17,11 @@ function App() {
   return (
     <div className={`main position-relative d-flex flex-column align-items-center p-5 ${mode}Background1 ${mode}Text`}>
       <Title />
-      <ModeButton />
+      <section className='buttonSection position-absolute d-flex gap-3' >
+        <FontsButton />
+        <ModeButton />
+      </section>
+
       <section className='row text-center w-100 gap-3 gap-sm-0 main-container' >
         <div className={`col-12 col-sm-6 minor-container`}>
          <Editor />

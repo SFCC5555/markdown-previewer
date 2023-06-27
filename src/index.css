@@ -107,7 +107,7 @@ h1 {
   font-size: clamp(3rem,8vw,8rem);
 }
 
-.button {
+.buttonSection {
 
   top:10px;
   right: 15px;
@@ -161,6 +161,45 @@ textarea ,textarea:focus {
   opacity: 75%;
 }
 
+.russo-one {
+  font-family: var(--mainFont);
+}
+
+.courier-new {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.times-new-roman {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.verdana {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sans-serif {
+  font-family: sans-serif
+}
+
+.fonts-menu {
+  top: 110%;
+}
+
+.lightFont, .darkFont {
+  cursor: pointer;
+}
+
+.lightFont:hover {
+  background-color: var(--lightBackground3);
+}
+
+.darkFont:hover {
+  background-color: var(--darkBackground3);
+}
 
 .minor-container {
   height: 50%;

@@ -20,7 +20,7 @@ Or _italic_.
 Or... wait for it... **_both!_**
 And feel free to go crazy ~~crossing stuff out~~.
 
-There's also [links](https://www.freecodecamp.org), and
+There's also [links](https://sfcc5555.netlify.app/), and
 > Block Quotes!
 
 And if you want to get really crazy, even tables:
@@ -40,4 +40,4 @@ And here. | Okay. | I think we get it.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`
+![SFCC Logo](https://raw.githubusercontent.com/SFCC5555/sfcc-web-projects/main/src/assets/icons/sfccIconSmall.png)`

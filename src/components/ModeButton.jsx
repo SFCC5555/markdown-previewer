@@ -14,7 +14,7 @@ const ModeButton = () => {
 
 
   return (
-    <button onClick={handleClick} className={`button ${mode}Button position-absolute rounded-3 p-2`}>{mode==='light'?'Dark':'Light'} Mode <i className={`bi bi-lightbulb${mode==='light'?'-off':''}-fill`} /></button>
+    <button onClick={handleClick} className={`${mode}Button rounded-3 p-2`}>{mode==='light'?'Dark':'Light'} Mode <i className={`bi bi-lightbulb${mode==='light'?'-off':''}-fill`} /></button>
   )
 }
 
