@@ -79,6 +79,10 @@ body {
   height: 100svh;
 }
 
+#root {
+  height: 100%;
+}
+
 .main {
   height: 100svh;
 }
