@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { marked } from "marked";
+import { useState } from "react";
 
 marked.setOptions({
   breaks: true,
@@ -13,18 +14,20 @@ renderer.link = function (href,title,text) {
 
 const Previewer = () => {
 
+  const [expand,setExpand] = useState(false);
+  
   const mode = useSelector(state=>state.mode);
   const font = useSelector(state=>state.font);
   const input = useSelector(state=>state.input);
 
   return (
-    <div className={`${mode}Shadow h-100`}>
+    <div className={`${mode}Shadow ${expand?'expand':'h-100'}`}>
       <div className={`${mode}Background3 header fs-4 ${mode}Border d-flex align-items-center justify-content-between px-3`}>
         <div className="d-flex align-items-center gap-2" >
           <div className="d-flex align-items-center gap-2" ><i className="bi bi-file-richtext"/> Previewer</div>
           <div className={`${font} fs-5`} >( {font.split('-').map(w=>w[0].toUpperCase()+w.slice(1)).join(' ')} )</div>
         </div>
-        <i className="bi bi-arrows-fullscreen expand-button" />
+        <i onClick={()=>setExpand(prev=>!prev)} className={`bi bi-arrows-${expand?'angle-contract':'fullscreen'} expand-button`} />
       </div>
       <div id="preview" dangerouslySetInnerHTML={{ __html: marked.parse(input,{renderer:renderer})}} className={`w-100 textarea ${font} ${mode}Background2 ${mode}Border ${mode}Text text p-3 text-start`}></div>
     </div>
