@@ -20,6 +20,7 @@ const Previewer = () => {
   const font = useSelector(state=>state.font);
   const input = useSelector(state=>state.input);
 
+
   return (
     <div className={`${mode}Shadow ${expand?'expand':'h-100'}`}>
       <div className={`${mode}Background3 header fs-4 ${mode}Border d-flex align-items-center justify-content-between px-3`}>
