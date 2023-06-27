@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+
+  --mainFont:'Russo One', sans-serif;
+
+  --lightText:#212529;
+  --darkText:#4aa3a3;
+  --lightBackground1:#87b5b5;
+  --darkBackground1:#3e464e;
+  --lightBackground2:#c0d8d8;
+  --darkBackground2:#212529;
+  --lightBackground3:#4aa3a3;
+  --darkBackground3:#363c42;
+  --lightShadow:1px 1px 10px 2px #3a5f5f;
+  --darkShadow:1px 1px 10px 2px #418585;
+}
+
+.lightText {
+  color: var(--lightText);
+}
+
+.darkText {
+  color: var(--darkText);
+}
+
+.lightBackground1 {
+  background-color: var(--lightBackground1);
+}
+
+.darkBackground1 {
+  background-color: var(--darkBackground1);
+}
+
+.lightBackground2 {
+  background-color: var(--lightBackground2);
+}
+
+.darkBackground2 {
+  background-color: var(--darkBackground2);
+}
+
+.lightBackground3 {
+  background-color: var(--lightBackground3);
+}
+
+.darkBackground3 {
+  background-color: var(--darkBackground3);
+}
+
+.lightShadow {
+  box-shadow: var(--lightShadow);
+}
+
+.darkShadow {
+  box-shadow: var(--darkShadow);
+}
+
+.lightBorder, .lightBorder:focus {
+  border: 1px solid var(--lightText);
+}
+
+.darkBorder, .darkBorder:focus {
+  border: 1px solid var(--darkText);
+}
+
+body {
+  font-family: var(--mainFont);
+}
+
+.main {
+  height: 100svh;
+}
+
+.hover-full-opacity {
+  opacity: 75%;
+}
+
+.hover-full-opacity:hover {
+  opacity: 100%;
+}
+
+h1 {
+  font-size: clamp(1.5rem,4vw,4rem)
+}
+
+.text {
+  font-size: clamp(1rem,1.5vw,1.3rem)
+}
+
+.title i {
+  font-size: clamp(3rem,8vw,8rem);
+}
+
+.button {
+
+  top:10px;
+  right: 15px;
+  font-size: clamp(1rem,2vw,1.5rem);
+
+}
+
+.lightButton {
+
+  color: var(--lightText);
+  background-color: var(--lightBackground1);
+  border-color: var(--lightText);
+  border: 1px solid var(--darkBackground1);
+
+}
+
+.darkButton {
+
+  color: var(--darkText);
+  background-color: var(--darkBackground1);
+  border-color: var(--darkText);
+  border: 1px solid var(--lightBackground1);
+
+}
+
+.lightButton:hover {
+  background-color: var(--lightBackground3);
+}
+
+.darkButton:hover {
+  background-color: var(--darkBackground3);
+}
+
+textarea ,textarea:focus {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.textarea {
+  height: calc(100% - 35px);
+  overflow-y: auto;
+}
+
+.header {
+  height: 35px
+}
+
+.expand-button:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+
+
+.main-container {
+  height: 50%;
+}
+
+@media screen and (min-width: 578px) {
+  .main-container {
+    height: 100%;
+  }
+}
