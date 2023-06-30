@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+
+  --russo-one-font:'Russo One', sans-serif;
+  --courier-new-font: 'Courier New', Courier, monospace;
+  --times-new-roman-font: 'Times New Roman', Times, serif;
+  --arial-font: Arial, Helvetica, sans-serif;
+  --verdana-font: Verdana, Geneva, Tahoma, sans-serif;
+  --sans-serif-font: sans-serif;
+
+
+  --lightText:#212529;
+  --darkText:#4aa3a3;
+  --lightBackground1:#87b5b5;
+  --darkBackground1:#3e464e;
+  --lightBackground2:#c0d8d8;
+  --darkBackground2:#212529;
+  --lightBackground3:#4aa3a3;
+  --darkBackground3:#363c42;
+  --darkBackgroundInverse:#87b5b5;
+  --lightBackgroundInverse:#3e464e;
+  --lightShadow:1px 1px 10px 2px #3a5f5f;
+  --darkShadow:1px 1px 10px 2px #418585;
+}
+
+body {
+  font-family: var(--russo-one-font);
+  height: 100svh;
+}
+
+#root {
+  height: 100%;
+}
+
+.main {
+  height: 100svh;
+}
+
+.hover-full-opacity {
+  opacity: 75%;
+}
+
+.hover-full-opacity:hover {
+  opacity: 100%;
+}
+
+h1 {
+  font-size: clamp(1.5rem,4vw,4rem)
+}
+
+.text {
+  font-size: clamp(1rem,1.5vw,1.3rem)
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.title i {
+  font-size: clamp(3rem,8vw,8rem);
+}
+
+.buttonSection {
+
+  top:10px;
+  right: 15px;
+  font-size: clamp(1rem,2vw,1.5rem);
+
+}
+
+textarea ,textarea:focus {
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.textarea {
+  height: calc(100% - 35px);
+  overflow-y: auto;
+}
+
+.header {
+  height: 35px
+}
+
+.expand-button:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+
+
+@each $mode in light, dark {
+
+  .#{$mode}Text {
+    color: var(--#{$mode}Text);
+  }
+  
+  .#{$mode}Background1 {
+    background-color: var(--#{$mode}Background1);
+  }
+  
+  .#{$mode}Background2 {
+    background-color: var(--#{$mode}Background2);
+  }
+  
+  .#{$mode}Background3 {
+    background-color: var(--#{$mode}Background3);
+  }
+  
+  .#{$mode}Shadow {
+    box-shadow: var(--#{$mode}Shadow);
+  }
+  
+  .#{$mode}Border, .#{$mode}Border:focus {
+    border: 1px solid var(--#{$mode}Text);
+  }
+  
+  .#{$mode}Button {
+  
+    color: var(--#{$mode}Text);
+    background-color: var(--#{$mode}Background1);
+    border-color: var(--#{$mode}Text);
+    border: 1px solid var(--#{$mode}BackgroundInverse);
+  
+  }
+  
+  .#{$mode}Button:hover {
+    background-color: var(--#{$mode}Background3);
+  }
+  
+  .#{$mode}Font:hover {
+    background-color: var(--#{$mode}Background3);
+    cursor: pointer;
+  }
+
+
+}
+
+$fonts: ('russo-one','courier-new','times-new-roman','arial','verdana','sans-serif');
+
+@each $font in $fonts {
+  .#{$font} {
+    font-family: var(--#{$font}-font);
+  }
+} 
+
+.fonts-menu {
+  top: 110%;
+  z-index: 20;
+}
+.minor-container {
+  height: 50%;
+}
+
+.main-container {
+  height: 85%;
+}
+
+.expand {
+  position: absolute;
+  top:8%;
+  left: 50%;
+  height: 91%;
+  width: 96%;
+  z-index: 10;
+  translate: -50%;
+}
+
+@media screen and (min-width: 578px) {
+  .minor-container {
+    height: 100%;
+  }
+
+  .main-container {
+    height: 75%;
+  }
+}
