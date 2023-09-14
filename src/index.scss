@@ -1,175 +1,183 @@
+// Import the 'Russo One' font from Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
+// Reset default styles for all elements
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+// Set the base font size for the HTML element
 html {
   font-size: 62.5%;
 }
 
+// Define CSS custom properties (variables) for colors, fonts, and shadows
 :root {
-
-  --russo-one-font:'Russo One', sans-serif;
+  --russo-one-font: 'Russo One', sans-serif;
   --courier-new-font: 'Courier New', Courier, monospace;
   --times-new-roman-font: 'Times New Roman', Times, serif;
   --arial-font: Arial, Helvetica, sans-serif;
   --verdana-font: Verdana, Geneva, Tahoma, sans-serif;
   --sans-serif-font: sans-serif;
 
-
-  --lightText:#212529;
-  --darkText:#4aa3a3;
-  --lightBackground1:#87b5b5;
-  --darkBackground1:#3e464e;
-  --lightBackground2:#c0d8d8;
-  --darkBackground2:#212529;
-  --lightBackground3:#4aa3a3;
-  --darkBackground3:#363c42;
-  --darkBackgroundInverse:#87b5b5;
-  --lightBackgroundInverse:#3e464e;
-  --lightShadow:1px 1px 10px 2px #3a5f5f;
-  --darkShadow:1px 1px 10px 2px #418585;
+  --lightText: #212529;
+  --darkText: #4aa3a3;
+  --lightBackground1: #87b5b5;
+  --darkBackground1: #3e464e;
+  --lightBackground2: #c0d8d8;
+  --darkBackground2: #212529;
+  --lightBackground3: #4aa3a3;
+  --darkBackground3: #363c42;
+  --darkBackgroundInverse: #87b5b5;
+  --lightBackgroundInverse: #3e464e;
+  --lightShadow: 1px 1px 10px 2px #3a5f5f;
+  --darkShadow: 1px 1px 10px 2px #418585;
 }
 
+// Apply base styles to the entire document
 body {
   font-family: var(--russo-one-font);
-  height: 100svh;
+  height: 100vh; // Full viewport height
 }
 
+// Style the root element of the application
 #root {
   height: 100%;
 }
 
+// Define a CSS class for the main content area
 .main {
-  height: 100svh;
+  height: 100vh; // Full viewport height
 }
 
+// Define a class for changing opacity on hover
 .hover-full-opacity {
   opacity: 75%;
 }
 
+// Apply full opacity on hover
 .hover-full-opacity:hover {
   opacity: 100%;
 }
 
+// Style headings with responsive font size using the 'clamp' function
 h1 {
-  font-size: clamp(1.5rem,4vw,4rem)
+  font-size: clamp(1.5rem, 4vw, 4rem);
 }
 
+// Style text with responsive font size using the 'clamp' function
 .text {
-  font-size: clamp(1rem,1.5vw,1.3rem)
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
 }
 
+// Style the title section
 .title {
   margin-top: 20px;
 }
 
+// Style icons within the title section
 .title i {
-  font-size: clamp(3rem,8vw,8rem);
+  font-size: clamp(3rem, 8vw, 8rem);
 }
 
+// Define a class for styling button sections
 .buttonSection {
-
-  top:10px;
+  top: 10px;
   right: 15px;
-  font-size: clamp(1rem,2vw,1.5rem);
-
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
-textarea ,textarea:focus {
+// Style textarea elements and their focus state
+textarea,
+textarea:focus {
   outline: none;
   border: none;
   resize: none;
 }
 
+// Style the textarea to occupy the available space with scrolling
 .textarea {
   height: calc(100% - 35px);
   overflow-y: auto;
 }
 
+// Style the header section
 .header {
-  height: 35px
+  height: 35px;
 }
 
+// Apply hover styles for buttons with the 'expand-button' class
 .expand-button:hover {
   cursor: pointer;
   opacity: 75%;
 }
 
-
+// Loop through light and dark modes to define styles
 @each $mode in light, dark {
-
   .#{$mode}Text {
     color: var(--#{$mode}Text);
   }
-  
   .#{$mode}Background1 {
     background-color: var(--#{$mode}Background1);
   }
-  
   .#{$mode}Background2 {
     background-color: var(--#{$mode}Background2);
   }
-  
   .#{$mode}Background3 {
     background-color: var(--#{$mode}Background3);
   }
-  
   .#{$mode}Shadow {
     box-shadow: var(--#{$mode}Shadow);
   }
-  
   .#{$mode}Border, .#{$mode}Border:focus {
     border: 1px solid var(--#{$mode}Text);
   }
-  
   .#{$mode}Button {
-  
     color: var(--#{$mode}Text);
     background-color: var(--#{$mode}Background1);
     border-color: var(--#{$mode}Text);
     border: 1px solid var(--#{$mode}BackgroundInverse);
-  
   }
-  
   .#{$mode}Button:hover {
     background-color: var(--#{$mode}Background3);
   }
-  
   .#{$mode}Font:hover {
     background-color: var(--#{$mode}Background3);
     cursor: pointer;
   }
-
-
 }
 
-$fonts: ('russo-one','courier-new','times-new-roman','arial','verdana','sans-serif');
+// Define an array of fonts and apply font styles dynamically
+$fonts: ('russo-one', 'courier-new', 'times-new-roman', 'arial', 'verdana', 'sans-serif');
 
 @each $font in $fonts {
   .#{$font} {
     font-family: var(--#{$font}-font);
   }
-} 
+}
 
+// Style the fonts menu
 .fonts-menu {
   top: 110%;
   z-index: 20;
 }
+
+// Define styles for a minor container
 .minor-container {
   height: 50%;
 }
 
+// Define styles for a main container
 .main-container {
   height: 85%;
 }
 
+// Define styles for an expandable element
 .expand {
   position: absolute;
-  top:8%;
+  top: 8%;
   left: 50%;
   height: 91%;
   width: 96%;
@@ -177,11 +185,12 @@ $fonts: ('russo-one','courier-new','times-new-roman','arial','verdana','sans-ser
   translate: -50%;
 }
 
+// Media query for screens with a minimum width of 578px
 @media screen and (min-width: 578px) {
+  // Adjust container heights for larger screens
   .minor-container {
     height: 100%;
   }
-
   .main-container {
     height: 75%;
   }
